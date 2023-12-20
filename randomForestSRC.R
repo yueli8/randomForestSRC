@@ -7,10 +7,41 @@ library(randomForestSRC)
 library(survival)
 data(veteran, package = "randomForestSRC")
 head(veteran)
+##   trt celltype time status karno diagtime age prior
+## 1   1        1   72      1    60        7  69     0
+## 2   1        1  411      1    70        5  64    10
+## 3   1        1  228      1    60        3  38     0
+## 4   1        1  126      1    60        9  63    10
+## 5   1        1  118      1    70       11  65    10
+## 6   1        1   10      1    20        5  49     0
+
 data(pbc, package = "randomForestSRC")
 head(pbc)
+##   days status treatment   age sex ascites hepatom spiders edema bili chol
+## 1  400      1         1 21464   1       1       1       1   1.0 14.5  261
+## 2 4500      0         1 20617   1       0       1       1   0.0  1.1  302
+## 3 1012      1         1 25594   0       0       0       0   0.5  1.4  176
+## 4 1925      1         1 19994   1       0       1       1   0.5  1.8  244
+## 5 1504      0         2 13918   1       0       1       1   0.0  3.4  279
+## 6 2503      1         2 24201   1       0       1       0   0.0  0.8  248
+##   albumin copper    alk   sgot trig platelet prothrombin stage
+## 1    2.60    156 1718.0 137.95  172      190        12.2     4
+## 2    4.14     54 7394.8 113.52   88      221        10.6     3
+## 3    3.48    210  516.0  96.10   55      151        12.0     4
+## 4    2.54     64 6121.8  60.63   92      183        10.3     4
+## 5    3.53    143  671.0 113.15   72      136        10.9     3
+## 6    3.98     50  944.0  93.00   63       NA        11.0     3
+
 data(wihs, package = "randomForestSRC")
 head(wihs)
+##   time status ageatfda idu black cd4nadir
+## 1 0.02      2       48   0     1     6.95
+## 2 0.02      2       35   1     1     2.51
+## 3 0.02      2       28   0     1     0.18
+## 4 0.02      2       46   1     0     4.65
+## 5 0.02      2       31   0     1     0.08
+## 6 0.02      2       45   1     1     2.05
+
 #example1
 v.obj <- rfsrc(Surv(time, status) ~ ., data = veteran, ntree = 100, nsplit = 10,
                na.action = "na.impute", tree.err = TRUE, importance = TRUE, block.size = 1)
