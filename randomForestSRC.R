@@ -1,3 +1,8 @@
+#先要下载tcga数据：https://xenabrowser.net/datapages/     
+#https://gdc-hub.s3.us-east-1.amazonaws.com/download/MMRF-COMMPASS.star_counts.tsv.gz  
+#https://gdc-hub.s3.us-east-1.amazonaws.com/download/MMRF-COMMPASS.Xena_phenotype.tsv         
+#https://gdc-hub.s3.us-east-1.amazonaws.com/download/MMRF-COMMPASS.survival.tsv 
+
 #https://www.jingege.wang/2023/03/31/%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e4%b9%8b%e9
 #%9a%8f%e6%9c%ba%e6%a3%ae%e6%9e%97%e7%94%9f%e5%ad%98%e5%88%86%e6%9e%90%ef%bc%88
 #randomforestsrc%ef%bc%89/
